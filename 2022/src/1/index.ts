@@ -1,7 +1,7 @@
 import { syncReadFile } from '@utils';
 
 function solve() {
-  const input = syncReadFile('1/input.in').split('\n');
+  const input = syncReadFile('1').split('\n');
 
   const data = input.reduce<number[]>((acc, val) => {
     if (acc.length === 0) acc.push(Number.parseInt(val));
