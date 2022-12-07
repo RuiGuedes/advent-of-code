@@ -24,7 +24,7 @@ function solve() {
   const input = syncReadFile('2/input.in').split('\n');
   const plays = input.map((e) => score(e.split(' ') as Round));
   const output = plays.reduce((acc, val) => acc + val, 0);
-  console.log(`If everything goes exactly according to the strategy guide the total score will be ${output}`);
+  console.log(`If everything goes exactly according to the strategy guide the total score will be ${output}.`);
 }
 
 solve();
