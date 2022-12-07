@@ -1,4 +1,4 @@
-import { syncReadFile } from '../utils';
+import { syncReadFile } from '@utils';
 
 function solve() {
   const input = syncReadFile('1/input.in').split('\n');

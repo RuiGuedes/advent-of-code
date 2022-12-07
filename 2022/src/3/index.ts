@@ -1,4 +1,4 @@
-import { syncReadFile } from '../utils';
+import { syncReadFile } from '@utils';
 
 /**
  * Computes the priority of a given element

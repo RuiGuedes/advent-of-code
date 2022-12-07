@@ -1,4 +1,4 @@
-import { syncReadFile } from '../utils';
+import { syncReadFile } from '@utils';
 
 type Shape = 'X' | 'Y' | 'Z'; // Rock, Paper, Scissors
 type OpponentShape = 'A' | 'B' | 'C'; // Rock, Paper, Scissors
