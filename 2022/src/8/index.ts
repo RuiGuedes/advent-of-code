@@ -20,8 +20,8 @@ function solve() {
     }
   }
 
-  const ouput = data.reduce((acc, val) => acc + val.filter(([_, e]) => e === 1).length, 0);
-  console.log(`There is a total of ${ouput} trees that are visible from outside the grid.`);
+  const output = data.reduce((acc, val) => acc + val.filter(([_, e]) => e === 1).length, 0);
+  console.log(`There is a total of ${output} trees that are visible from outside the grid.`);
 }
 
 solve();
