@@ -11,7 +11,7 @@ function priority(elem: string) {
 }
 
 function solve() {
-  const input = syncReadFile('3').split('\n');
+  const input = syncReadFile('03').split('\n');
   const data = input
     .map((e) => [e.slice(0, e.length / 2), e.slice(e.length / 2, e.length)])
     .map((e) => {

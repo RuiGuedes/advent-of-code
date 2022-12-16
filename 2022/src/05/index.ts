@@ -23,7 +23,7 @@ function parseStacks(input: string[][]) {
 }
 
 function solve() {
-  const input = syncReadFile('5').split('\n');
+  const input = syncReadFile('05').split('\n');
   const inputSplitIndex = input.findIndex((e) => e === '');
 
   const stacks = parseStacks(input.slice(0, inputSplitIndex - 1).map((e) => e.split('')));

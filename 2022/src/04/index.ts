@@ -12,7 +12,7 @@ function range(a: number, b: number) {
 }
 
 function solve() {
-  const input = syncReadFile('4').split('\n');
+  const input = syncReadFile('04').split('\n');
   const data = input.map((e) =>
     e
       .split(',')

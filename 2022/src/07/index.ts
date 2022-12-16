@@ -7,7 +7,7 @@ type Filesystem = { [key: string]: FilesystemDirectory };
 const isDir = (s: string) => !!s.match(/(?<=dir\s).+(?!\.)/g);
 
 function solve() {
-  const input = syncReadFile('7').split('$ ');
+  const input = syncReadFile('07').split('$ ');
   const dirStack: string[] = [];
 
   /** Parses the terminal input/output */

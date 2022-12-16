@@ -15,7 +15,7 @@ function startOfPacketMarker(datastream: string): number | undefined {
 }
 
 function solve() {
-  const input = syncReadFile('6').split('\n');
+  const input = syncReadFile('06').split('\n');
   const output = input.map((datastream) => {
     const markerIndex = startOfPacketMarker(datastream);
     return `${datastream} -> ${markerIndex ? `First marker after ${markerIndex} character.` : 'No marker was found.'}`;

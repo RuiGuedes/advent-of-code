@@ -58,7 +58,7 @@ function updateTail([tr, tc]: Position, [hr, hc]: Position, state: string[][]): 
 }
 
 function solve() {
-  const input = syncReadFile('9').split('\n');
+  const input = syncReadFile('09').split('\n');
   const data = input.map((e) => e.split(' ').map((e, idx) => (idx === 1 ? Number.parseInt(e) : e))) as [
     Direction,
     number
