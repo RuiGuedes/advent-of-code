@@ -1,0 +1,13 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Zig
+template.zig
+zig-cache/
+zig-out/
+/release/
+/debug/
+/build/
+/build-*/
+/docgen_tmp/
