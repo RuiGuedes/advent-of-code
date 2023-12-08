@@ -3,9 +3,9 @@
 
 const std = @import("std");
 const print = @import("std").debug.print;
+const isValidDigitFromAscii = @import("utils").isValidDigitFromAscii;
 
-const zero_ascii_decimal_value: u8 = 48;
-const nine_ascii_decimal_value: u8 = 57;
+const ZeroAsciiDecimalValue = @import("utils").ZeroAsciiDecimalValue;
 
 const Digit = struct {
     slug: []const u8,
@@ -24,10 +24,6 @@ const digits = [_]Digit{
     .{ .slug = "nine", .value = 9 },
 };
 
-fn isValidDigitFromAscii(char: u8) bool {
-    return if (char >= zero_ascii_decimal_value and char <= nine_ascii_decimal_value) true else false;
-}
-
 fn isValidDigitFromSlug(slug: []const u8, str: []const u8) bool {
     return std.mem.eql(u8, slug, str);
 }
@@ -39,7 +35,7 @@ fn getCalibrationValue(line: []const u8) u64 {
     var i: usize = 0;
     while (i < line.len) : (i += 1) {
         if (isValidDigitFromAscii(line[i])) {
-            last_digit = line[i] - zero_ascii_decimal_value;
+            last_digit = line[i] - ZeroAsciiDecimalValue;
             if (first_digit == 0) {
                 first_digit = last_digit;
             }

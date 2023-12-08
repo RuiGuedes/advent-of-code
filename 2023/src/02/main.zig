@@ -7,7 +7,7 @@ const eql = @import("std").mem.eql;
 const parseInt = @import("std").fmt.parseInt;
 const splitSequence = @import("std").mem.splitSequence;
 
-const Part = enum { One, Two };
+const Part = @import("utils").Part;
 const GameConfig = .{ .blue = 14, .green = 13, .red = 12 };
 
 fn checkGameFeasibility(game: []const u8) !bool {

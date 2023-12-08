@@ -15,6 +15,9 @@ pub fn build(b: *std.Build) void {
     // set a preferred release mode, allowing the user to decide how to optimize.
     const optimize = b.standardOptimizeOption(.{});
 
+    // Custom modules definition
+    const utils_module = b.createModule(.{ .source_file = .{ .path = "src/utils/main.zig" } });
+
     const day = b.option([]const u8, "day", "Advent of Code 2023 Day") orelse "01";
     const path = b.fmt("src/{s}/main.zig", .{day});
 
@@ -24,6 +27,9 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+
+    // Attach the custom modules to the executable
+    exe.addModule("utils", utils_module);
 
     // This declares intent for the executable to be installed into the
     // standard location when the user invokes the "install" step (the default
@@ -60,6 +66,9 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
+
+    // Attach the custom modules to the unit tests
+    unit_tests.addModule("utils", utils_module);
 
     const run_unit_tests = b.addRunArtifact(unit_tests);
 
